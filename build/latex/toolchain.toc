@@ -1,0 +1,343 @@
+\babel@toc {russian}{}\relax 
+\contentsline {chapter}{\numberline {1}Терминология}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Приложение (англ. Application)}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Модуль/Пакет/Библиотека/Фреймворк (англ. Module/Package/Library/Framework)}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Модули привносят множество преимуществ в наш код:}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Парадигма программирования (англ. programming paradigm)}{4}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Статическое и динамическое типизирование}{5}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Тестирование}{6}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Логирование (англ. Logging)}{7}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Язык разметки (англ. Markup Language)}{7}{section.1.8}%
+\contentsline {section}{\numberline {1.9}Система контроля версий (англ. Version Control System)}{8}{section.1.9}%
+\contentsline {section}{\numberline {1.10}Ошибка (англ. bug)}{8}{section.1.10}%
+\contentsline {section}{\numberline {1.11}Задачи/Проблемы (англ. Issues)}{9}{section.1.11}%
+\contentsline {section}{\numberline {1.12}Fail\sphinxhyphen {}fast}{9}{section.1.12}%
+\contentsline {section}{\numberline {1.13}Исключение (англ. Exceptions)}{9}{section.1.13}%
+\contentsline {chapter}{\numberline {2}Командная строка}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Работа в командной строке}{11}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Мотивация}{11}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}cd \sphinxhyphen {} change directory}{12}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}ls \sphinxhyphen {} list}{14}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}clear}{16}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}mkdir \sphinxhyphen {} make directory}{17}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}touch}{17}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.7}cat \sphinxhyphen {} concatenate}{18}{subsection.2.1.7}%
+\contentsline {subsection}{\numberline {2.1.8}echo}{20}{subsection.2.1.8}%
+\contentsline {subsection}{\numberline {2.1.9}export}{20}{subsection.2.1.9}%
+\contentsline {subsection}{\numberline {2.1.10}\$}{21}{subsection.2.1.10}%
+\contentsline {subsection}{\numberline {2.1.11}rm — remove}{24}{subsection.2.1.11}%
+\contentsline {subsection}{\numberline {2.1.12}rmdir — remove directory}{25}{subsection.2.1.12}%
+\contentsline {subsection}{\numberline {2.1.13}cp — copy}{26}{subsection.2.1.13}%
+\contentsline {subsection}{\numberline {2.1.14}mv — move}{26}{subsection.2.1.14}%
+\contentsline {subsection}{\numberline {2.1.15}chmod — change mode}{27}{subsection.2.1.15}%
+\contentsline {subsection}{\numberline {2.1.16}sudo — superuser do}{28}{subsection.2.1.16}%
+\contentsline {subsection}{\numberline {2.1.17}chown — change owner}{28}{subsection.2.1.17}%
+\contentsline {subsection}{\numberline {2.1.18}history}{29}{subsection.2.1.18}%
+\contentsline {subsection}{\numberline {2.1.19}grep — global regular expression print}{29}{subsection.2.1.19}%
+\contentsline {subsection}{\numberline {2.1.20}top — table of process}{31}{subsection.2.1.20}%
+\contentsline {subsection}{\numberline {2.1.21}Практические примеры}{31}{subsection.2.1.21}%
+\contentsline {subsubsection}{Мониторинг подключения usb\sphinxhyphen {}устройств}{31}{subsubsection*.3}%
+\contentsline {subsubsection}{Мониторинг подключения устройств с помощью dmesg}{33}{subsubsection*.4}%
+\contentsline {subsubsection}{Мониторинг оставшегося места на диске}{33}{subsubsection*.5}%
+\contentsline {section}{\numberline {2.2}Задачи}{34}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Задача 1}{34}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Задача 2}{34}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Задача 3}{35}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Задача 4}{36}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Задача 5}{36}{subsection.2.2.5}%
+\contentsline {section}{\numberline {2.3}Вопросы}{37}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Система контроля версий Git}{39}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Git}{39}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Система контроля версий Git}{39}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Краткий исторический экскурс}{40}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Приступаем к использованию Git}{40}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Тестовый код программы}{44}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Описание тестовой программы}{45}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Оформление рабочего каталога}{45}{subsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.1.7}Настройка конфигурации git}{46}{subsection.3.1.7}%
+\contentsline {subsection}{\numberline {3.1.8}Первый пример работы с git}{48}{subsection.3.1.8}%
+\contentsline {subsection}{\numberline {3.1.9}Вот несколько шагов, которые помогут начать работу с Git:}{54}{subsection.3.1.9}%
+\contentsline {subsection}{\numberline {3.1.10}Что такое публичный и приватный репозиторий?}{54}{subsection.3.1.10}%
+\contentsline {subsection}{\numberline {3.1.11}Зафиксируйте изменения git}{54}{subsection.3.1.11}%
+\contentsline {subsection}{\numberline {3.1.12}Немного статистики о системе git}{55}{subsection.3.1.12}%
+\contentsline {chapter}{\numberline {4}Git как инструмент командной работы. Работа с удаленными репозиториями}{57}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Возможности платформам размещения исходного кода программ на примере Github}{59}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Среда разработки}{61}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Среда разработки}{61}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Подсветка синтаксиса}{62}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Автодополнение кода (завершение кода)}{63}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Рефакторинг}{66}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}Компиляция}{67}{subsection.6.1.4}%
+\contentsline {subsection}{\numberline {6.1.5}Настройка окружения под себя}{68}{subsection.6.1.5}%
+\contentsline {chapter}{\numberline {7}Стили оформления кода}{69}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Оформление кода}{69}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Используйте отступы}{70}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Соблюдайте принятую длину строки}{72}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}Используйте фигурные скобки правильно}{73}{subsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.1.4}Именуйте объекты правильно}{74}{subsection.7.1.4}%
+\contentsline {subsection}{\numberline {7.1.5}Придерживаться определенного подхода}{74}{subsection.7.1.5}%
+\contentsline {subsection}{\numberline {7.1.6}Избегайте вложенности (Flat is better than nested)}{75}{subsection.7.1.6}%
+\contentsline {subsection}{\numberline {7.1.7}Не перегружайте код (Sparse is better than dense)}{76}{subsection.7.1.7}%
+\contentsline {subsection}{\numberline {7.1.8}Выводы}{76}{subsection.7.1.8}%
+\contentsline {section}{\numberline {7.2}Задачи}{76}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Задача 1}{76}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Задача 2}{77}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Задача 3}{77}{subsection.7.2.3}%
+\contentsline {subsection}{\numberline {7.2.4}Задача 4}{78}{subsection.7.2.4}%
+\contentsline {subsection}{\numberline {7.2.5}Задача 5}{80}{subsection.7.2.5}%
+\contentsline {section}{\numberline {7.3}Вопросы}{83}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Польза документации на примере поиска проекта на GitHub}{85}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Сервис GitHub}{85}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Учимся читать и использовать в своем проекте чужой код с GitHub}{85}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Где и как искать код?}{86}{subsection.8.1.2}%
+\contentsline {subsubsection}{Выбрали проект — на что в первую очередь стоит обратить внимание?}{91}{subsubsection*.6}%
+\contentsline {subsubsection}{С чего начать знакомство с чужим кодом?**}{91}{subsubsection*.7}%
+\contentsline {subsubsection}{Как использовать чужой код в своем проекте?}{95}{subsubsection*.8}%
+\contentsline {subsection}{\numberline {8.1.3}Работа с GitHub}{96}{subsection.8.1.3}%
+\contentsline {chapter}{\numberline {9}Раздел 2. Работа над проектом}{107}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Стадии жизни проекта}{109}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Стадии жизни проекта}{109}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}От человека:}{109}{subsection.10.1.1}%
+\contentsline {subsection}{\numberline {10.1.2}Поехали}{110}{subsection.10.1.2}%
+\contentsline {subsubsection}{От машины:}{110}{subsubsection*.9}%
+\contentsline {subsection}{\numberline {10.1.3}Идея}{111}{subsection.10.1.3}%
+\contentsline {subsubsection}{От машины:}{111}{subsubsection*.10}%
+\contentsline {subsection}{\numberline {10.1.4}Визуализация}{112}{subsection.10.1.4}%
+\contentsline {subsubsection}{От машины:}{112}{subsubsection*.11}%
+\contentsline {subsection}{\numberline {10.1.5}Архитектура}{112}{subsection.10.1.5}%
+\contentsline {subsubsection}{От машины:}{113}{subsubsection*.12}%
+\contentsline {subsection}{\numberline {10.1.6}Разработка}{113}{subsection.10.1.6}%
+\contentsline {subsubsection}{От машины:}{114}{subsubsection*.13}%
+\contentsline {subsection}{\numberline {10.1.7}Отладка}{114}{subsection.10.1.7}%
+\contentsline {subsubsection}{От машины:}{114}{subsubsection*.14}%
+\contentsline {subsection}{\numberline {10.1.8}Документация}{115}{subsection.10.1.8}%
+\contentsline {subsubsection}{От машины:}{115}{subsubsection*.15}%
+\contentsline {subsection}{\numberline {10.1.9}Релиз}{116}{subsection.10.1.9}%
+\contentsline {subsubsection}{От машины:}{116}{subsubsection*.16}%
+\contentsline {subsection}{\numberline {10.1.10}Сборка}{117}{subsection.10.1.10}%
+\contentsline {subsubsection}{От машины:}{117}{subsubsection*.17}%
+\contentsline {subsection}{\numberline {10.1.11}Контейнеризация}{118}{subsection.10.1.11}%
+\contentsline {subsubsection}{От машины:}{118}{subsubsection*.18}%
+\contentsline {chapter}{\numberline {11}Минимально полезный продукт}{119}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Работа над MVP}{119}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}Этапы разработки и проверка гипотез}{119}{subsection.11.1.1}%
+\contentsline {subsubsection}{Что такое MVP и из каких этапов он состоит?}{119}{subsubsection*.19}%
+\contentsline {subsubsection}{Какова цель MVP?}{119}{subsubsection*.20}%
+\contentsline {subsubsection}{MVP обычно состоит из следующих этапов:}{120}{subsubsection*.21}%
+\contentsline {subsection}{\numberline {11.1.2}Вот пример MVP для новой службы доставки еды:}{120}{subsection.11.1.2}%
+\contentsline {subsection}{\numberline {11.1.3}Вот пример MVP для нового мобильного приложения:}{121}{subsection.11.1.3}%
+\contentsline {subsubsection}{Список рекомендаций, чтобы подготовить команду программистов к MVP проекту, посвященному разработке мобильного приложения для школы}{121}{subsubsection*.22}%
+\contentsline {subsection}{\numberline {11.1.4}Как оценить качество MVP, какие показатели, критерии?}{122}{subsection.11.1.4}%
+\contentsline {subsubsection}{Где используется MVP, в чем отличие от Pet Project?}{122}{subsubsection*.23}%
+\contentsline {subsection}{\numberline {11.1.5}Задание для проверки}{123}{subsection.11.1.5}%
+\contentsline {chapter}{\numberline {12}UML диаграммы}{125}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Факультатив. Стандартные графические схемы при разработке ПО}{125}{section.12.1}%
+\contentsline {subsection}{\numberline {12.1.1}Возможности использования UML (Unified Modeling Language)}{125}{subsection.12.1.1}%
+\contentsline {subsection}{\numberline {12.1.2}Что такое UML?}{126}{subsection.12.1.2}%
+\contentsline {subsubsection}{Как UML помогает в работе над проектами? Кто их разрабатывает?}{127}{subsubsection*.24}%
+\contentsline {subsection}{\numberline {12.1.3}Каковы основные типы диаграмм в UML?}{128}{subsection.12.1.3}%
+\contentsline {subsubsection}{В каких случаях использование UML избыточно и можно обойтись без него?}{138}{subsubsection*.25}%
+\contentsline {subsubsection}{В чем разница между описанием программы в виде блок\sphinxhyphen {}схемы и описанием программы с использованием диаграммы UML?}{138}{subsubsection*.26}%
+\contentsline {subsubsection}{Преимущества и недостатки UML}{139}{subsubsection*.27}%
+\contentsline {paragraph}{Преимущества UML}{139}{paragraph*.28}%
+\contentsline {paragraph}{Недостатки UML}{139}{paragraph*.29}%
+\contentsline {subsubsection}{Этапы разработки UML\sphinxhyphen {}диаграмм для чат\sphinxhyphen {}бота}{140}{subsubsection*.30}%
+\contentsline {paragraph}{1. Определить требования}{140}{paragraph*.31}%
+\contentsline {paragraph}{2. Изучить существующие решения}{141}{paragraph*.32}%
+\contentsline {paragraph}{3. Определить архитектуру}{142}{paragraph*.33}%
+\contentsline {paragraph}{Порядок действий для использования API сервиса RapidAPI}{144}{paragraph*.34}%
+\contentsline {paragraph}{4. Разработать диаграмму прецедентов}{146}{paragraph*.35}%
+\contentsline {paragraph}{5. Разработать диаграммы классов}{147}{paragraph*.36}%
+\contentsline {paragraph}{6. Разработать диаграммы последовательностей}{148}{paragraph*.37}%
+\contentsline {paragraph}{7. Разработать диаграммы компонентов и развертывания}{149}{paragraph*.38}%
+\contentsline {paragraph}{8. Протестируйте и оптимизируйте диаграммы}{150}{paragraph*.39}%
+\contentsline {paragraph}{9. Итеративное развитие}{150}{paragraph*.40}%
+\contentsline {paragraph}{Какие инструменты с открытым исходным кодом доступны для работы с UML?}{151}{paragraph*.41}%
+\contentsline {paragraph}{Как оценить качество модели UML?}{152}{paragraph*.42}%
+\contentsline {section}{\numberline {12.2}Задачи}{152}{section.12.2}%
+\contentsline {subsection}{\numberline {12.2.1}1. Построение диаграммы классов для чат\sphinxhyphen {}бота Telegram:}{152}{subsection.12.2.1}%
+\contentsline {subsection}{\numberline {12.2.2}2. Создание диаграммы последовательности для обработки запросов от пользователя:}{153}{subsection.12.2.2}%
+\contentsline {subsection}{\numberline {12.2.3}3. Построение диаграммы состояний для управления состоянием чат\sphinxhyphen {}бота:}{153}{subsection.12.2.3}%
+\contentsline {subsection}{\numberline {12.2.4}4. Разработка диаграммы компонентов для чат\sphinxhyphen {}бота Telegram:}{153}{subsection.12.2.4}%
+\contentsline {subsection}{\numberline {12.2.5}5. Построение диаграммы прецедентов для чат\sphinxhyphen {}бота Telegram:}{153}{subsection.12.2.5}%
+\contentsline {section}{\numberline {12.3}Вопросы}{153}{section.12.3}%
+\contentsline {chapter}{\numberline {13}Код vs. Библиотека}{155}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Код \sphinxhyphen {}\textgreater {} Библиотека}{155}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}Мотивация}{155}{subsection.13.1.1}%
+\contentsline {subsection}{\numberline {13.1.2}Определяем функциональность библиотеки}{155}{subsection.13.1.2}%
+\contentsline {subsection}{\numberline {13.1.3}Собираем проект}{160}{subsection.13.1.3}%
+\contentsline {subsection}{\numberline {13.1.4}Выводы}{162}{subsection.13.1.4}%
+\contentsline {section}{\numberline {13.2}Задачи}{162}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}Задача 1}{162}{subsection.13.2.1}%
+\contentsline {subsection}{\numberline {13.2.2}Задача 2}{165}{subsection.13.2.2}%
+\contentsline {subsection}{\numberline {13.2.3}Задача 3}{166}{subsection.13.2.3}%
+\contentsline {subsection}{\numberline {13.2.4}Задача 4}{167}{subsection.13.2.4}%
+\contentsline {section}{\numberline {13.3}Вопросы}{169}{section.13.3}%
+\contentsline {chapter}{\numberline {14}Основы Open Source}{171}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Основы Open Source, базовые определения и принципы устройства}{171}{section.14.1}%
+\contentsline {subsection}{\numberline {14.1.1}Что такое Open Source?}{171}{subsection.14.1.1}%
+\contentsline {subsection}{\numberline {14.1.2}Как развивалось сообщество открытого исходного кода?}{172}{subsection.14.1.2}%
+\contentsline {subsection}{\numberline {14.1.3}Как открытый исходный код помогает развивать технологии и ускорять прогресс?}{172}{subsection.14.1.3}%
+\contentsline {chapter}{\numberline {15}Лицензии Open Source}{175}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Лицензии Open Source}{175}{section.15.1}%
+\contentsline {subsection}{\numberline {15.1.1}Самые распространенные лицензии Open Source}{175}{subsection.15.1.1}%
+\contentsline {subsection}{\numberline {15.1.2}Какая лицензия ПО позволяет использовать исходный код для коммерческой разработки ПО?}{177}{subsection.15.1.2}%
+\contentsline {subsection}{\numberline {15.1.3}Какая лицензия ПО запрещает использование кода в коммерческих целях, для получения прибыли?}{178}{subsection.15.1.3}%
+\contentsline {subsubsection}{В чем отличие лицензий GPL от LGPL?}{178}{subsubsection*.43}%
+\contentsline {subsection}{\numberline {15.1.4}Какие есть варианты использования лицензии GPL?}{179}{subsection.15.1.4}%
+\contentsline {subsection}{\numberline {15.1.5}Какая лицензия у ОС Android?}{179}{subsection.15.1.5}%
+\contentsline {subsection}{\numberline {15.1.6}Какую лицензию выбрать, если я хочу использовать чужой код в своем проекте?}{180}{subsection.15.1.6}%
+\contentsline {subsection}{\numberline {15.1.7}Несколько общих советов по лицензированию и защите прав разработчиков программного обеспечения}{181}{subsection.15.1.7}%
+\contentsline {subsection}{\numberline {15.1.8}Интересный вопрос: кому принадлежат права на результат работы искусственного интеллекта?}{181}{subsection.15.1.8}%
+\contentsline {chapter}{\numberline {16}GitHub Pages}{183}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Github Pages}{183}{section.16.1}%
+\contentsline {subsection}{\numberline {16.1.1}С какой целью используют сервис GitHub Pages?}{189}{subsection.16.1.1}%
+\contentsline {subsection}{\numberline {16.1.2}Преимущества и недостатки сервиса GitHub Pages}{189}{subsection.16.1.2}%
+\contentsline {subsubsection}{Преимущества:}{189}{subsubsection*.44}%
+\contentsline {subsubsection}{Недостатки:}{190}{subsubsection*.45}%
+\contentsline {section}{\numberline {16.2}Задачи}{190}{section.16.2}%
+\contentsline {section}{\numberline {16.3}Вопросы}{192}{section.16.3}%
+\contentsline {chapter}{\numberline {17}Виртуальное окружение}{193}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Знакомство с рабочим окружением}{193}{section.17.1}%
+\contentsline {subsection}{\numberline {17.1.1}Добавить директорию в PATH}{196}{subsection.17.1.1}%
+\contentsline {subsection}{\numberline {17.1.2}Знакомство с virtualenv}{197}{subsection.17.1.2}%
+\contentsline {subsubsection}{Создание виртуальной среды}{199}{subsubsection*.46}%
+\contentsline {subsubsection}{Перенос установленных пакетов}{201}{subsubsection*.47}%
+\contentsline {subsubsection}{Установка virtualenv и создание виртуальной среды}{201}{subsubsection*.48}%
+\contentsline {subsubsection}{Создание виртуальной среды virtualenv происходит так}{201}{subsubsection*.49}%
+\contentsline {subsubsection}{Копирование виртуальной среды}{202}{subsubsection*.50}%
+\contentsline {subsubsection}{Удаление виртуальной среды}{202}{subsubsection*.51}%
+\contentsline {subsection}{\numberline {17.1.3}Справочный материал}{202}{subsection.17.1.3}%
+\contentsline {section}{\numberline {17.2}Задачи для практики}{204}{section.17.2}%
+\contentsline {subsection}{\numberline {17.2.1}Задача: настроить виртуальную среду с помощью venv для управления зависимостями проекта}{204}{subsection.17.2.1}%
+\contentsline {subsection}{\numberline {17.2.2}Задача: настроить виртуальную среду с помощью venv для управления зависимостями проекта}{204}{subsection.17.2.2}%
+\contentsline {subsection}{\numberline {17.2.3}Задача: настроить виртуальную среду с помощью venv для управления зависимостями проекта}{204}{subsection.17.2.3}%
+\contentsline {subsection}{\numberline {17.2.4}Задача: настроить виртуальную среду с помощью venv и отправить код в репозиторий GitHub.}{205}{subsection.17.2.4}%
+\contentsline {subsection}{\numberline {17.2.5}Задача: настроить виртуальную среду с помощью venv и отправить код в репозиторий Git.}{205}{subsection.17.2.5}%
+\contentsline {subsection}{\numberline {17.2.6}Задача: настроить виртуальную среду с помощью venv и отправить код в репозиторий Git.}{206}{subsection.17.2.6}%
+\contentsline {section}{\numberline {17.3}Вопросы:}{206}{section.17.3}%
+\contentsline {chapter}{\numberline {18}Инструменты для создания документации}{209}{chapter.18}%
+\contentsline {section}{\numberline {18.1}Документирование}{209}{section.18.1}%
+\contentsline {subsection}{\numberline {18.1.1}Мотивация}{209}{subsection.18.1.1}%
+\contentsline {subsection}{\numberline {18.1.2}Markdown}{210}{subsection.18.1.2}%
+\contentsline {subsubsection}{Заголовки}{210}{subsubsection*.52}%
+\contentsline {subsubsection}{Абзацы}{210}{subsubsection*.53}%
+\contentsline {subsubsection}{Форматирование текста}{211}{subsubsection*.54}%
+\contentsline {subsubsection}{Списки}{212}{subsubsection*.55}%
+\contentsline {subsubsection}{Ссылки}{213}{subsubsection*.56}%
+\contentsline {subsubsection}{Вставка изображений}{214}{subsubsection*.57}%
+\contentsline {subsubsection}{Код}{215}{subsubsection*.58}%
+\contentsline {subsubsection}{Цитирование}{216}{subsubsection*.59}%
+\contentsline {subsection}{\numberline {18.1.3}reStructuredText}{216}{subsection.18.1.3}%
+\contentsline {subsection}{\numberline {18.1.4}Sphinx}{216}{subsection.18.1.4}%
+\contentsline {subsection}{\numberline {18.1.5}Markdown и Sphinx}{218}{subsection.18.1.5}%
+\contentsline {subsection}{\numberline {18.1.6}Документация из кода}{219}{subsection.18.1.6}%
+\contentsline {subsection}{\numberline {18.1.7}Оформление документации}{220}{subsection.18.1.7}%
+\contentsline {section}{\numberline {18.2}Задачи}{226}{section.18.2}%
+\contentsline {subsection}{\numberline {18.2.1}Задача 1}{226}{subsection.18.2.1}%
+\contentsline {subsection}{\numberline {18.2.2}Задача 2}{227}{subsection.18.2.2}%
+\contentsline {subsection}{\numberline {18.2.3}Задача 3}{230}{subsection.18.2.3}%
+\contentsline {section}{\numberline {18.3}Вопросы}{230}{section.18.3}%
+\contentsline {chapter}{\numberline {19}Основы тестирования}{233}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Тестирование}{233}{section.19.1}%
+\contentsline {subsection}{\numberline {19.1.1}Мотивация}{233}{subsection.19.1.1}%
+\contentsline {subsection}{\numberline {19.1.2}Виды тестов}{234}{subsection.19.1.2}%
+\contentsline {subsubsection}{Модульное тестирование}{234}{subsubsection*.60}%
+\contentsline {paragraph}{Пример}{236}{paragraph*.61}%
+\contentsline {paragraph}{Параметризация тестов}{237}{paragraph*.62}%
+\contentsline {subsection}{\numberline {19.1.3}Интеграционное тестирование}{239}{subsection.19.1.3}%
+\contentsline {subsection}{\numberline {19.1.4}Больше тестов}{239}{subsection.19.1.4}%
+\contentsline {subsection}{\numberline {19.1.5}Разработка через тестирование}{239}{subsection.19.1.5}%
+\contentsline {subsubsection}{Пример}{240}{subsubsection*.63}%
+\contentsline {section}{\numberline {19.2}Задачи:}{242}{section.19.2}%
+\contentsline {subsection}{\numberline {19.2.1}Задача 1}{242}{subsection.19.2.1}%
+\contentsline {subsection}{\numberline {19.2.2}Задача 2}{243}{subsection.19.2.2}%
+\contentsline {subsection}{\numberline {19.2.3}Задача 3}{246}{subsection.19.2.3}%
+\contentsline {subsection}{\numberline {19.2.4}Задача 4}{247}{subsection.19.2.4}%
+\contentsline {section}{\numberline {19.3}Вопросы}{249}{section.19.3}%
+\contentsline {chapter}{\numberline {20}Логгирование работы приложения}{251}{chapter.20}%
+\contentsline {section}{\numberline {20.1}Логирование. Что это и в чем его польза?}{251}{section.20.1}%
+\contentsline {subsection}{\numberline {20.1.1}Мотивация}{251}{subsection.20.1.1}%
+\contentsline {subsection}{\numberline {20.1.2}Зачем нужно логирование?}{251}{subsection.20.1.2}%
+\contentsline {subsection}{\numberline {20.1.3}Уровни логирования}{252}{subsection.20.1.3}%
+\contentsline {subsection}{\numberline {20.1.4}Основы грамотного логирования}{253}{subsection.20.1.4}%
+\contentsline {subsection}{\numberline {20.1.5}Библиотеки логирования для языка программирования Python}{254}{subsection.20.1.5}%
+\contentsline {subsubsection}{\sphinxstylestrong {logging}}{254}{subsubsection*.64}%
+\contentsline {subsubsection}{\sphinxstylestrong {structlog}}{255}{subsubsection*.65}%
+\contentsline {subsubsection}{\sphinxstylestrong {loguru}}{257}{subsubsection*.66}%
+\contentsline {subsubsection}{\sphinxstylestrong {logbook}}{258}{subsubsection*.67}%
+\contentsline {subsection}{\numberline {20.1.6}Централизация логов}{258}{subsection.20.1.6}%
+\contentsline {subsection}{\numberline {20.1.7}Вывод}{258}{subsection.20.1.7}%
+\contentsline {section}{\numberline {20.2}Задача}{258}{section.20.2}%
+\contentsline {subsection}{\numberline {20.2.1}Задача 1}{258}{subsection.20.2.1}%
+\contentsline {subsection}{\numberline {20.2.2}Задача 2}{259}{subsection.20.2.2}%
+\contentsline {subsection}{\numberline {20.2.3}Задача 3}{261}{subsection.20.2.3}%
+\contentsline {section}{\numberline {20.3}Вопросы}{263}{section.20.3}%
+\contentsline {chapter}{\numberline {21}Сборка проекта в pip пакет}{265}{chapter.21}%
+\contentsline {section}{\numberline {21.1}Менеджеры пакетов}{265}{section.21.1}%
+\contentsline {subsection}{\numberline {21.1.1}Ctrl\sphinxhyphen {}C/Ctrl\sphinxhyphen {}V}{265}{subsection.21.1.1}%
+\contentsline {subsection}{\numberline {21.1.2}Клонируем и указываем путь через sys}{266}{subsection.21.1.2}%
+\contentsline {subsection}{\numberline {21.1.3}Ставим через pip, используя git репозиторий}{267}{subsection.21.1.3}%
+\contentsline {subsubsection}{Немного про pip}{267}{subsubsection*.68}%
+\contentsline {subsection}{\numberline {21.1.4}Делаем сборку библиотеки для публикации. \sphinxstyleliteralintitle {\sphinxupquote {pip}}}{268}{subsection.21.1.4}%
+\contentsline {subsubsection}{Преимущества bdist (wheels):}{268}{subsubsection*.69}%
+\contentsline {subsubsection}{Настраиваем окружение}{269}{subsubsection*.70}%
+\contentsline {paragraph}{Немного о форматировании по PEP8}{270}{paragraph*.71}%
+\contentsline {paragraph}{Возвращаемся в проект}{271}{paragraph*.72}%
+\contentsline {subsection}{\numberline {21.1.5}Публикация в PyPI}{273}{subsection.21.1.5}%
+\contentsline {section}{\numberline {21.2}Задачи}{273}{section.21.2}%
+\contentsline {subsection}{\numberline {21.2.1}Задача 1}{273}{subsection.21.2.1}%
+\contentsline {subsection}{\numberline {21.2.2}Задача 2}{274}{subsection.21.2.2}%
+\contentsline {section}{\numberline {21.3}Вопросы}{275}{section.21.3}%
+\contentsline {chapter}{\numberline {22}Менеджеры служб и планировщики задач}{277}{chapter.22}%
+\contentsline {section}{\numberline {22.1}Менеджеры и планировщики}{277}{section.22.1}%
+\contentsline {subsection}{\numberline {22.1.1}Мотивация}{277}{subsection.22.1.1}%
+\contentsline {subsection}{\numberline {22.1.2}Планировщик crontab}{278}{subsection.22.1.2}%
+\contentsline {subsubsection}{Практическое применение crontab}{280}{subsubsection*.73}%
+\contentsline {subsection}{\numberline {22.1.3}Менеджер systemctl}{281}{subsection.22.1.3}%
+\contentsline {subsubsection}{Практическое применение systemctl}{282}{subsubsection*.74}%
+\contentsline {section}{\numberline {22.2}Задачи}{285}{section.22.2}%
+\contentsline {subsection}{\numberline {22.2.1}Задача 1}{285}{subsection.22.2.1}%
+\contentsline {subsection}{\numberline {22.2.2}Задача 2}{286}{subsection.22.2.2}%
+\contentsline {section}{\numberline {22.3}Вопросы}{287}{section.22.3}%
+\contentsline {chapter}{\numberline {23}Контейнерезация с Dcoker}{289}{chapter.23}%
+\contentsline {section}{\numberline {23.1}Контейнеризация на примере Docker}{289}{section.23.1}%
+\contentsline {subsection}{\numberline {23.1.1}Введение}{289}{subsection.23.1.1}%
+\contentsline {subsection}{\numberline {23.1.2}Рассмотрим пример: как Docker может помочь в разработке ПО}{290}{subsection.23.1.2}%
+\contentsline {subsubsection}{Образ и контейнер в Docker}{291}{subsubsection*.75}%
+\contentsline {subsection}{\numberline {23.1.3}Концепции Docker}{292}{subsection.23.1.3}%
+\contentsline {subsection}{\numberline {23.1.4}Установка и использование}{292}{subsection.23.1.4}%
+\contentsline {subsubsection}{Установка Докера в Windows}{292}{subsubsection*.76}%
+\contentsline {subsubsection}{Установка Докера в Linux}{292}{subsubsection*.77}%
+\contentsline {subsubsection}{Быстрый Старт}{293}{subsubsection*.78}%
+\contentsline {paragraph}{docker ps}{293}{paragraph*.79}%
+\contentsline {paragraph}{docker run}{294}{paragraph*.80}%
+\contentsline {subsection}{\numberline {23.1.5}Файл Dockerfile}{294}{subsection.23.1.5}%
+\contentsline {subsubsection}{Команды для управления контейнерами}{297}{subsubsection*.81}%
+\contentsline {subsubsection}{Пример использования команды \sphinxstyleliteralintitle {\sphinxupquote {docker run}} для запуска контейнера}{297}{subsubsection*.82}%
+\contentsline {subsubsection}{Работа с данными}{297}{subsubsection*.83}%
+\contentsline {subsubsection}{Контейнер Docker обладает следующими характеристиками:}{298}{subsubsection*.84}%
+\contentsline {subsubsection}{Особенности контейнеров}{298}{subsubsection*.85}%
+\contentsline {subsection}{\numberline {23.1.6}Практическое задание: Развертывание Python кода в Docker контейнере}{299}{subsection.23.1.6}%
+\contentsline {subsection}{\numberline {23.1.7}Заключение}{301}{subsection.23.1.7}%
+\contentsline {subsection}{\numberline {23.1.8}Ссылки на дополнительные материалы по Docker}{302}{subsection.23.1.8}%
+\contentsline {section}{\numberline {23.2}Вопросы}{302}{section.23.2}%
+\contentsline {chapter}{\numberline {24}Практическое использование Docker}{305}{chapter.24}%
+\contentsline {chapter}{\numberline {25}Работа с сетью в Docker}{307}{chapter.25}%
+\contentsline {section}{\numberline {25.1}Концепция сети в Docker}{307}{section.25.1}%
+\contentsline {subsection}{\numberline {25.1.1}Познакомимся с тем, как объединять несколько контейнеров в сеть Docker}{307}{subsection.25.1.1}%
+\contentsline {subsection}{\numberline {25.1.2}Сети: вводная часть}{307}{subsection.25.1.2}%
+\contentsline {subsubsection}{Что такое сеть?}{307}{subsubsection*.86}%
+\contentsline {subsubsection}{Объяснение работы сетей в контейнерах Docker}{309}{subsubsection*.87}%
+\contentsline {subsubsection}{Типы сетевых драйверов Docker}{309}{subsubsection*.88}%
+\contentsline {subsection}{\numberline {25.1.3}Познакомимся с сетями \sphinxstylestrong {Bridge} и \sphinxstylestrong {Host} на практике}{310}{subsection.25.1.3}%
+\contentsline {subsubsection}{Создание пользовательской Bridge сети}{311}{subsubsection*.89}%
+\contentsline {chapter}{\numberline {26}Реестр Docker}{313}{chapter.26}%
+\contentsline {section}{\numberline {26.1}Реестр Docker}{313}{section.26.1}%
+\contentsline {subsection}{\numberline {26.1.1}Создание первого Docker репозитория}{315}{subsection.26.1.1}%
+\contentsline {subsection}{\numberline {26.1.2}Поиск Docker образа}{317}{subsection.26.1.2}%
+\contentsline {subsection}{\numberline {26.1.3}Загрузка Docker образа из реестра Docker Hub}{319}{subsection.26.1.3}%
+\contentsline {subsection}{\numberline {26.1.4}Создание Docker образа}{320}{subsection.26.1.4}%
+\contentsline {subsection}{\numberline {26.1.5}Как это работает?}{320}{subsection.26.1.5}%
+\contentsline {subsection}{\numberline {26.1.6}Создайте Dockerfile, который определяет конфигурацию нашего приложения}{320}{subsection.26.1.6}%
+\contentsline {subsection}{\numberline {26.1.7}Образ на Docker Hub}{321}{subsection.26.1.7}%
