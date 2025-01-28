@@ -1,5 +1,105 @@
 # Recap
 
+## Чек-лист
+
+* Умею создать локальный репозиторий
+```bash
+git init
+```
+
+* Умею склонировать удаленный репозиторий https://github.com/abc/xyz.git
+
+```bash
+git clone https://github.com/abc/xyz.git
+```
+
+* Умею склонировать удаленный репозиторий https://github.com/abc/xyz.git
+
+```bash
+git remote add staging https://github.com/abc/xyz.git
+```
+
+* Умею настроить .gitigonore так, чтобы в репозиторий не попадали артифакты запуска и сборки, например файлы, например файлы все с расширением pyc. (строка в файле .gitignore)
+
+```bash
+*.pyc
+```
+
+* Умею добавить отдельный файл в staging area. Например README.md
+
+```bash
+git add README.md
+```
+
+* Умею посмотреть изменения в рабочей директории по сравнению с зафиксированной (закомиченной версией).
+
+
+```bash
+git diff
+```
+
+* Умею откатить изменения опреленного файла до последней закомиченной версии. Например README.md
+
+```bash
+git checkout README.md
+```
+
+* Умею переключиться на другую ветку, которая существует. Например development.
+
+```bash
+ git checkout development
+```
+
+* Умею создать ветку локально и переключиться на нее. Например featrure-add-logs
+
+```bash 
+git checkout -b featrure-add-logs
+```
+
+* Умею отправить свои (локальные) изменения в определенную ветку (например feature-user-config) определенного удаленного (например sandbox) репозитория
+
+```bash
+git push sandbox feature-user-config
+```
+
+* Умею забрать изменения в локальную ветку с определенной ветки (например feature-user-config)  определенного удаленного (например sandbox) репозитория и сразу применить изменения в workspace
+
+```bash
+git pull sandbox feature-user-config
+```
+
+* Умею отменить последний коммит сделанный локально, но еще не отправленный в удаленный репозиторий
+
+```bash
+git reset HEAD~
+```
+
+
+* Умею проверить локально какие коммиты были сделаны в репозитории.
+
+```bash
+git log
+```
+
+* Умею слить две ветки локально, например изменения из master в ветку feature-user-login. Сейчас мы находимся на ветке feature-user-login
+
+```bash
+git merge master
+```
+
+Умею отменить команду запрос на разрешение конфликта (после git merge)
+
+```bash
+git merge --abort
+git reset --hard
+```
+
+* Умею создать форк проекта
+* Умею создать задачу (issue) на github или gitlab
+* Умею создать запрос на принятие изменений (merge/pull request)
+
+
+
 Команды, котрых хватит в большинстве случаев:
 
 ![git basic flow](https://user-images.githubusercontent.com/14274827/91470661-9d5a8780-e8b2-11ea-9ccb-0d813d2e35d1.png)
