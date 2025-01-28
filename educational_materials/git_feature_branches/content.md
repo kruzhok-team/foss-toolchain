@@ -330,3 +330,142 @@ git checkout -b feature/item-by-id-endpoint
 с проблемой, с которой сталкиваются команды при совместной работе над одним репозиторием: конфликты 
 слияния (merge conflict).
 
+### Начало
+
+Однажды Алиса и Федор решили независимо друг от друга улучшить запрос /items. Алиса хотела 
+включить дополнительные метаданные для каждого элемента, такие как описание и цена. Тем временем 
+Федор намеревался добавить пагинацию к запросу, чтобы пользователи могли запрашивать 
+ограниченное количество элементов за раз.
+
+### Изменения Алиса
+
+Алиса создала новую ветку для своей работы:
+
+```bash 
+git checkout -b feature/item-metadata
+```
+
+Она обновила запрос /items в main.py, включив в нее метаданные:
+
+```python
+@app.get("/items")
+def get_items():
+    return {
+        "items": [
+            {"id": 1, "name": "item1", "description": "A fancy item", "price": 10.99},
+            {"id": 2, "name": "item2", "description": "A useful item", "price": 5.49},
+            {"id": 3, "name": "item3", "description": "A rare item", "price": 99.99},
+        ]
+    }
+```
+И закомитила изменения:
+
+```bash
+git add main.py
+git commit -m "Add metadata to /items endpoint"
+```
+
+Затем она отправила свои изменения на ги и открыла запрос на извлечение для проверки.
+
+### Изменения Федора
+
+В то же время Федора работал над своей веткой:
+
+```bash 
+git checkout -b feature/items-pagination
+```
+
+Он так же внес изменени запрос /item в соответствии со своей задумкой.
+
+```python
+from fastapi import Query
+
+@app.get("/items")
+def get_items(skip: int = Query(0), limit: int = Query(10)):
+    all_items = ["item1", "item2", "item3", "item4", "item5"]
+    return {"items": all_items[skip : skip + limit]}
+```
+
+И зафиксировал свои изменения:
+
+```bash
+git add main.py
+git commit -m "Add pagination to /items endpoint"
+```
+
+### Конфликт слияния
+
+Когда Алиса и Федор попытались объединить свои запросы на слияние в main, GitHub пометил 
+конфликт слияния. Их изменения в запросе /items были несовместимы, и Git не смог 
+автоматически объединить обновления.
+
+Так как Алиса и Федор не договорились перед внесением изменений им придется работать вместе 
+для разрешения конфликта. Федор договаривается с Алисой, что сольет изменения у себя и 
+обратиться к Алисе, если возникнут вопросы. Он подтягивает ее изменения и сливает в свою ветку
+
+```bash
+# assumes he already performed `git checkout feature/items-pagination`
+git fetch origin feature/item-metadata
+git merge feature/item-metadata
+```
+
+Как и предполагалось git сообщил о конфликте:
+
+```bash
+Auto-merging main.py
+CONFLICT (content): Merge conflict in main.py
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+Когда Федор открыл файл, он увидел конфликтующие строки кода. Свой код в разделе HEAD и код Алисы в 
+разделе feature/item-metadata. Если бы слияния было на компьютере Алисе:
+
+```python
+@app.get("/items")
+def get_items():
+<<<<<<< HEAD
+    all_items = ["item1", "item2", "item3", "item4", "item5"]
+    return {"items": all_items[skip : skip + limit]}
+=======
+    return {
+        "items": [
+            {"id": 1, "name": "item1", "description": "A fancy item", "price": 10.99},
+            {"id": 2, "name": "item2", "description": "A useful item", "price": 5.49},
+            {"id": 3, "name": "item3", "description": "A rare item", "price": 99.99},
+        ]
+    }
+>>>>>>> feature/item-metadata
+
+```
+После обсуждения Алиса и Федор решили включить и метаданные, и пагинацию. Они обновили
+запрос /items следующим образом:
+
+```python 
+from fastapi import Query
+
+@app.get("/items")
+def get_items(skip: int = Query(0), limit: int = Query(10)):
+    all_items = [
+        {"id": 1, "name": "item1", "description": "A fancy item", "price": 10.99},
+        {"id": 2, "name": "item2", "description": "A useful item", "price": 5.49},
+        {"id": 3, "name": "item3", "description": "A rare item", "price": 99.99},
+        {"id": 4, "name": "item4", "description": "A common item", "price": 1.99},
+        {"id": 5, "name": "item5", "description": "A premium item", "price": 49.99},
+    ]
+    return {"items": all_items[skip : skip + limit]}
+```
+
+
+После этого последовала обычная цепочка действий:
+
+```bash
+git add main.py
+git commit -m "Resolve merge conflict: combine metadata and pagination"
+git push origin feature/items-pagination
+```
+
+### Слияние в main
+
+Заметьте что Федор отправил слитые изменения в свою ветку. После того, как Федор отправил внесенные
+изменения, Алиса одобрила обновленный запрос на слияние, и изменения обоих разработчиков добавилиь 
+в ветку main.
