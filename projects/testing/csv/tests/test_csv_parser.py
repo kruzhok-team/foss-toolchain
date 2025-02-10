@@ -1,3 +1,6 @@
+import pytest
+from csv_parser.csv_parser import parse_csv, AmbiguousInputError
+
 def test_parse_csv_empty_string():
     csv_string = ""
     result = parse_csv(csv_string)
@@ -20,9 +23,8 @@ def test_parse_csv_multiple_rows():
 
 def test_parse_csv_missing_columns():
     csv_string = "Name,Age,City\nJohn,30"
-    result = parse_csv(csv_string)
-    expected = [{"Name": "John", "Age": "30", "City": ""}]
-    assert result == expected
+    with pytest.raises(AmbiguousInputError):
+        parse_csv(csv_string)
 
 def test_parse_csv_trailing_comma():
     csv_string = "Name,Age,City\nJohn,30,New York,"
