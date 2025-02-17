@@ -1,10 +1,20 @@
 import pytest
-from csv_parser.csv_parser import parse_csv, AmbiguousInputError
+from csv_parser.csv_parser import (
+    parse_csv, 
+    AmbiguousInputError,
+    MixedSeparatorsError
+)
 
 def test_parse_csv_empty_string():
     csv_string = ""
     result = parse_csv(csv_string)
     assert result == []
+
+def test_parse_csv_no_row():
+    csv_string = "Name,Age,City"
+    result = parse_csv(csv_string)
+    expected = None
+    assert result == expected
 
 def test_parse_csv_single_row():
     csv_string = "Name,Age,City\nJohn,30,New York"
@@ -32,6 +42,11 @@ def test_parse_csv_trailing_comma():
     expected = [{"Name": "John", "Age": "30", "City": "New York"}]
     assert result == expected
 
+def test_parse_csv_trailing_commas():
+    csv_string = "Name,Age,City\nJohn,30,New York,,"
+    with pytest.raises(AmbiguousInputError):
+        parse_csv(csv_string)
+
 def test_parse_csv_extra_whitespace():
     csv_string = "  Name  , Age , City  \n   John,  30  ,  New York"
     result = parse_csv(csv_string)
@@ -56,3 +71,8 @@ def test_parse_csv_with_quotes():
         {"Name": "Alice", "Age": "25", "City": "Chicago"},
     ]
     assert result == expected
+
+def test_parse_csv_mixed_separators():
+    csv_string = "Name,Age,City\nJohn;30;New York"
+    with pytest.raises(MixedSeparatorsError):
+        parse_csv(csv_string)

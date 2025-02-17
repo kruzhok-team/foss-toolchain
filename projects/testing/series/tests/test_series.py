@@ -1,18 +1,36 @@
 import pytest
 
-from my_math.series import (get_series,
-                            get_even_series,
-                            get_odd_series)
+from my_math.series import (
+    get_series,
+    get_even_series,
+    get_odd_series,
+    EndOfSeriesNegative
+)
 
 class TestSeries:
     def test_series(self):
         assert get_series(5) == [0, 1, 2, 3, 4]
 
+    def test_series_zero(self):
+        assert get_series(0) == []
+    
+    def test_series_single_element(self):
+        assert get_series(1) == [0]
+
     def test_even_series(self):
         assert get_even_series(5) == [0, 2, 4, 6, 8]
 
+    @pytest.mark.xfail
+    def test_even_series_should_fail(self):
+        assert get_even_series(7) == [0, 2, 4, 6]
+
+
     def test_odd_series(self):
         assert get_odd_series(5) == [1, 3, 5, 7, 9]
+
+    def test_negative_limit(self):
+        with pytest.raises(EndOfSeriesNegative):
+            get_series(-5)
 
     # test include the same code as in the function implementation
     def test_even_series_bad(self):

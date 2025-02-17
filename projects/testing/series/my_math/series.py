@@ -1,4 +1,9 @@
+class EndOfSeriesNegative(Exception):
+    pass
+
 def get_series(n):
+    if n < 0:
+        raise EndOfSeriesNegative()
     return list(range(n))
     
 def get_even_series(n):

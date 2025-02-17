@@ -1,44 +1,38 @@
-import csv
-
 class AmbiguousInputError(Exception):
-    
+                          
     def __init__(self, data):
-        self.message = f"Could not define proper order for {data}"
+        self.message = f"Failed to parse '{data}'"
+
+class MixedSeparatorsError(Exception):
+    pass
 
 
-def parse_csv(content: str) -> list[dict[str, str]]:
-    """
-    Parse csv and returns corresponding column-value for every row
+def parse_csv(content: str, separator: str = ",") -> list[dict[str, str]] | None:
+    result = list()
+    if not content:
+        return result
+    
+    lines = content.split("\n")
+    if len(lines) == 1:
+        return None
+    header = lines[0].split(separator)
+    header = [col.strip() for col in header]
+    for line in lines[1:]:
+        if len(header) > 1 and not separator in line:
+            raise MixedSeparatorsError
+        # columns number +1 compared to cols
+        if line.count(separator) == len(header):
+            if line.strip()[-1] == separator:
+                line = line.strip()[:-1]
+        values = line.split(separator)
+        values = [val.strip() for val in values]
+        if len(values) != len(header):
+            raise AmbiguousInputError(line)
+        line_dict = {}
+        for col, val in zip(header, values):
+            #line_dict[col] = val.strip('"')
+            line_dict[col] = val.replace('"', '')
+        result.append(line_dict)
+    return result
 
-    :param content: csv-formatted content like "Name,Age,City\nJohn,30,New York"
-    :type content: str
-
-    Example:
-
-    Input: "Name,Age,City\nJohn,30,New York"
-
-    Ouput:
-    [
-        {"Name": "John", "Age": "30", "City": "New York"},
-        {"Name": "Alice", "Age": "25", "City": "Chicago"},
-    ]
-    """
-    data = []
-    lines = content.strip().split("\n")
-    if not lines:
-        return data
-
-    reader = csv.reader(lines)
-    header = next(reader)
-
-    for row in reader:
-        row_dict = {column.strip(): "" for column in header}
-        if len(row) < len(header) or len(row) > len(header) + 1:
-            raise AmbiguousInputError(row)
-        if len(row) == len(header) + 1 and row[-1] != "":
-            raise AmbiguousInputError(row)
-        for col_name, value in zip(header, row):
-            row_dict[col_name.strip()] = value.strip()
-        data.append(row_dict)
-
-    return data
+    
