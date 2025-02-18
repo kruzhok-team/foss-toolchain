@@ -46,6 +46,8 @@ If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 ```
 
+## Базовые практики
+
 ### Используйте отступы
 
 Одно из основных правил хорошего стиля программирования (code style) заключается в том, что разные уровни вложенности стоит выделять при помощи отступов, используя знаки пробела или табуляции. **Работая с кодом в рамках одного файла, стоит использовать что-то одно: или пробелы, или табуляцию**. 
@@ -106,9 +108,14 @@ int main ()
 В Python также есть ситуации, когда отступы не будут приводить к ошибке, например, при вызове функции, название и аргументы которой не помещаются в максимальную длину строки и должны быть перенесены на следующую строку.
 
 ```python 
-#buity 
+#ok 
 foo = long_function_name(var_one, var_two,
                          var_three, var_four)
+
+#ok 
+foo = long_function_name(
+    var_one, var_two, var_three, var_four
+)
 
 #not_so_buity
 foo = long_function_name(var_one, var_two,
@@ -132,7 +139,7 @@ if super_long_condition_variable == True and another_condition_with_yet_longer_n
 Просто перенести второе условие на новую строку нельзя, будет ошибка:
 
 ```python
-if super_long_condition_variable == True and 
+if super_long_condition_variable == True and
    another_condition_with_yet_longer_name == False:
     pass
     # do stuff here
@@ -176,6 +183,12 @@ income = (gross_wages
 long_function_name(var_one, var_two, var_three, var_four,
                    var_six, var_seven, var_eight)
 ```
+
+Разные инструменты используют различную длину строки по умолчанию, но ее всегда можно настроить при запуске форматирования. Ниже пример с [black](https://github.com/psf/black):
+
+<pre><code class="shell">
+black --line-length 80 example.py
+</code></pre>
 
 ### Используйте фигурные скобки правильно
 
@@ -336,7 +349,290 @@ for bits, max_val in capacity:
     print("%i bits can store number up to %i" % (bits, max_val))
 ```
 
+### Используйте принятый регистр для разных сущностей
+
+Название классов в CamelCase.
+
+```python
+# MarketItem in CamelCase
+class MarketItem(str): 
+    pass
+```
+
+Название пременных и функций офомляем в snake_case
+
+```python
+# order_items, item and amount in snake_case
+def order_items(item, amount):
+    for _ in range(amount):
+        # order item here
+        pass
+```
+
+
+### Имена переменных явлюятся полными и информативными
+
+Используйте имена, которые дают представления о том, что этот объект значит в контескте поекта:
+
+```python
+#bad naming 
+for m in mm:
+    if m == "January":
+       d = 31
+
+#good 
+for month in months:
+    if month == "January":
+       days_in_month = 31
+
+```
+
+В зависимости от контекста можно исользовать более простые имена, например days вместо days_in_month:
+
+```python
+for month in months:
+    if month == "January":
+       days = 31
+```
+
+### Не обанывайте
+
+Имена переменых должны соответствовать смыслу зранящихся в них значений:
+
+```python
+days_in_month = 0
+year = 2025
+for month in months:
+    if month == "January":
+       days_in_month += 31
+    ...
+    if month == "December":
+       days_in_month += 31
+print(f"There is {days_in_month} days in {year} year")
+```
+
+### Используйте f-cтроки
+
+Предпочтительный способ форматирования вывода f-string:
+
+```python
+print(f"There is {days_in_month} days in {year} year")
+```
+
+Вместо
+
+```python
+print("There is {} days in {} year".format(days_in_month, year))
+```
+
+### Аннотация типов
+
+Присутствует аннотация типов для параметров и выходного значения функции
+
+```python
+# without annotation
+def check_visible_satellites(site, sats, epoch):
+    observed = dict()
+    for sat in sats:
+       observed[sat] = is_observed(site, sat)
+    return observed
+
+# with annotation
+def check_visible_satellites(
+   site: str, 
+   sats: list[str],
+   epoch: datetime.datetime
+) -> dict[str, bool]:
+    observed = dict()
+    for sat in sats:
+       observed[sat] = is_observed(site, sat)
+    return observed
+```
+
+### Используйте свои объекты
+
+Как видно из примеров выше мы использовали тип str для обозначения как спутника так и приемника (site). Из контекста понятно что dict[str, bool] содержит в качестве ключей спутники, однако это понятно не всегда, *для того, чтобы можно было быстрее понять структуру, мы можем делать классы* даже если там храниться таже информаци, что и в одной переменной.
+
+```python
+class Satellite():
+    def __init__(self, name: str):
+        self.name = name
+
+class Site():
+    def __init__(self, name: str, lat: float, lon: float):
+        self.name = name
+        self.lat = lat
+        self.lon = lon
+
+def check_visible_satellites(
+   site: Site, 
+   sats: list[Satellite],
+   epoch: datetime.datetime
+) -> dict[Satellite, bool]:
+    observed = dict()
+    for sat in sats:
+       observed[sat] = is_observed(site, sat)
+    return observed
+```
+
+### Группируйте константы
+
+Использовать перечисления чтобы хранить константы, которые относятся к одной группе. 
+
+```python
+from enum import Enum
+
+class GNSS(Enum):
+    GPS = "GPS"
+    GLO = "GLONASS"
+    GAL = "Galileo"
+    BDS = "BeiDou"
+```
+
+Использование перечислений сохранит время разработчику, чтобы выяснить, какие именно значения может принимать тот или иной аргумент.
+
+```python
+# without enumerations
+def is_belong_to_gnss(
+   site: Site, 
+   gnss: str
+) -> bool:
+    if sat.name[0] == "G" and gnss == "gps":
+        return true:
+    elif: 
+        ....
+        # other systems here
+    return false
+
+# fails since "GPS" is passed instead of "gps"
+is_belong_to_gnss(Satellite("G03"), "GPS")
+```
+
+Будет ошибка из-за того, что передано `GPS` вместо `gps` 
+
+```python
+
+# with enumerations
+def is_belong_to_gnss(
+   site: Site, 
+   gnss: GNSS
+) -> bool:
+    if sat.name[0] == "G" and gnss == GNSS.GPS:
+        return true:
+    elif: 
+        ....
+        # other systems here
+    return false
+
+is_belong_to_gnss(Satellite("G03"), GNSS.GPS)
+```
+
+Так же можете использовать свои классы:
+
+
+```python
+from enum import Enum
+
+class Point(object):
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def __repr__(self):
+        return 'Point(%r, %r)' % (self.x, self.y)
+
+class Corner(Enum):
+    BottomLeft = Point(0, 0)
+    TopLeft = Point(0, 100)
+    TopRight = Point(100, 100)
+    BottmRight = Point(100, 0)
+```
+
+### Название функций должно начинаться с глагола
+
+```python
+# bad
+def addition(a: float, b: float):
+    return a + b 
+
+# very bad
+def operation(a: float, b: float):
+    return a + b
+
+# good 
+def add(a: float, b: float):
+    return a + b
+```
+
+### Single responsibility
+
+Одна *функция должна делать одно специфичное действие* , т.е. функцию read_and_parse_data() должна быть разбита на две и написано какие именно данные она читает read_data() и разбивает parse_data():
+
+```python
+from pathlib import Path
+
+def read_data(filename: Path) -> list[str]:
+    with open(filename, 'r') as file:
+        return file.readlines()
+
+def parse_data(data: list[str]) -> dict[str, int]:
+    parsed_data = {}
+    for line in data:
+        key, value = line.strip().split(',')
+        parsed_data[key] = int(value)
+    return parsed_data
+```
+
+### Используйте кастомные исключения
+
+При необходимости используйте [кастомные исключения](https://realpython.com/python-raise-exception/#raising-built-in-exceptions). Название ошибки должно отсылать к месту где произошла ошибка.  При этом следует помнить что не несколько ситуаций может быть описано одним классом, а детали можно описать в сообщении (например pytest [позволяет разделять](https://docs.pytest.org/en/8.0.x/how-to/assert.html#matching-exception-messages) ошибки по сообщению). Ниже пример того как один класс ошибок используется с разными сообщениями.
+
+```python
+# grades.py
+
+class GradeValueError(Exception):
+    pass
+
+def calculate_average_grade(grades):
+    total = 0
+    count = 0
+    for grade in grades:
+        if grade < 0 or grade > 100:
+            raise GradeValueError(
+                "grade values must be between 0 and 100 inclusive"
+            )
+        if grade - int(grade) != 0:
+            raise GradeValueError(
+                "grade must be integer"
+            )
+        total += grade
+        count += 1
+    return round(total / count, 2)
+```
+
+### Используйте правильные объекты
+
+Для хранения сущностей используются классы, которые предназначены для этого. Ниже приведен пример, того как для пути файла можно использовать строку, но удобнее использовать Path из pathlib.
+
+```python
+
+#could be better
+def read_data(filename: str) -> list[str]:
+    with open(filename, 'r') as file:
+        return file.readlines()
+
+#good
+from pathlib import Path
+def read_data(filename: Path) -> list[str]:
+    with open(filename, 'r') as file:
+        return file.readlines()
+```
+
+## Автоматизируйте то, что можно автоматизировать
+
+Форматирование кода соответствует [black](https://github.com/psf/black). Можно воспользоваться автоматическим [инструментом](https://semakin.dev/2020/05/black/) для форматирования или посмотреть как будет выглядеть форматирование с помощью онлайн [редактора](https://black.vercel.app/?version=stable). Так же существуют [расширения для VSCode](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter) и PyCharm.
+
+
 ## Выводы
 
-Придерживаться стиля нужно для того, чтобы писать код понятно. Хороший стиль помогает быстро сориентироваться в коде и найти тот участок, за которым вы пришли в этот модуль. Часть работы по оформлению кода можно делегировать автоматическим средствам, таким как `autopep8`. Про другую часть придется помнить и писать код с учетом этих знаний. Стиль — это не про то, чтобы писать меньше кода. Иногда (редко) вам будет казаться, что придерживаться стиля контринтуитивно, а получивший код некрасив. Но если так пишет большинство разработчиков — придерживайтесь рекомендаций, со временем вы привыкнете. Вы не сможете начать хорошо оформлять код без практики: пишите, а самое главное — читайте чужой код, чтобы понять, как пишут ваши коллеги. 
+Придерживаться стиля нужно для того, чтобы писать код понятно. Хороший стиль помогает быстро сориентироваться в коде и найти тот участок, за которым вы пришли в этот модуль. Часть работы по оформлению кода можно делегировать автоматическим средствам, таким как `autopep8` или `black`. Про другую часть придется помнить и писать код с учетом этих знаний. Стиль — это не про то, чтобы писать меньше кода. Иногда (редко) вам будет казаться, что придерживаться стиля контринтуитивно, а получивший код некрасив. Но если так пишет большинство разработчиков — придерживайтесь рекомендаций, со временем вы привыкнете. Вы не сможете начать хорошо оформлять код без практики: пишите, а самое главное — читайте чужой код, чтобы понять, как пишут ваши коллеги. 
 
